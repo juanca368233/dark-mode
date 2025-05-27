@@ -47,19 +47,29 @@
                 <div class="stage-content">
                     <p style="margin-bottom: 20px;">Elige uno de estos modos:</p>
                     <div class="modes">
-                        <div class="mode">
+                        <div class="mode" data-time="50" data-break="10">
                             <div class="mode-title" data-icon="🕒">Modo 50/10</div>
                             <ul class="list">
                                 <li>50 minutos de estudio/código/diseño sin interrupciones</li>
                                 <li>10 minutos de descanso <strong>sin celular</strong></li>
                             </ul>
+                            <div class="timer-display"></div>
+                            <div class="timer-controls">
+                                <button class="timer-button">Iniciar 50/10</button>
+                                <button class="skip-button" style="display: none;">Saltar ⏭️</button>
+                            </div>
                         </div>
-                        <div class="mode">
+                        <div class="mode" data-time="90" data-break="30">
                             <div class="mode-title" data-icon="⚔️">Modo 90/30</div>
                             <ul class="list">
                                 <li>90 minutos de enfoque máximo</li>
                                 <li>30 minutos de descanso profundo o movimiento</li>
                             </ul>
+                            <div class="timer-display"></div>
+                            <div class="timer-controls">
+                                <button class="timer-button">Iniciar 90/30</button>
+                                <button class="skip-button" style="display: none;">Saltar ⏭️</button>
+                            </div>
                         </div>
                     </div>
                     <p><strong>Durante esta etapa:</strong> <span class="highlight">ejecuta, no consumas pasivamente</span>. Sé brutal con tu enfoque.</p>
@@ -170,5 +180,6 @@
             Diseñado con 🖤 por Dark Mode
         </div>
     </div>
+    <script src="timer.js"></script>
 </body>
 </html>

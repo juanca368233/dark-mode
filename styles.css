@@ -306,3 +306,86 @@ td {
     size: A4;
     margin: 0;
 }
+
+.modes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.mode {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #3d4a59;
+    transition: all 0.3s ease;
+}
+
+.mode:hover {
+    border-color: #F81B5A;
+}
+
+.mode.active {
+    border-color: #4ecdc4;
+    box-shadow: 0 0 15px rgba(78, 205, 196, 0.2);
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.timer-button {
+    flex: 1;
+    background: #F81B5A;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.timer-button:hover {
+    background: #d41549;
+}
+
+.timer-button.active {
+    background: #4ecdc4;
+}
+
+.skip-button {
+    background: #3d4a59;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skip-button:hover {
+    background: #4a5a6d;
+}
+
+.timer-display {
+    background: #1e1e1e;
+    color: #4ecdc4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 15px;
+    font-family: monospace;
+}
+
+.phase-indicator {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+}
