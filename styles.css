@@ -77,7 +77,9 @@ body {
     margin-bottom: 30px;
     border-left: 6px solid #F81B5A;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
 }
 
 .stage:hover {
@@ -212,7 +214,7 @@ td {
     background: linear-gradient(135deg, #2B2B2B 0%, #232323 100%);
     border-radius: 16px;
     padding: 30px;
-    margin-top: 30px;
+    margin: 40px 0;
     border: 2px solid #2B2B2B;
 }
 
@@ -238,6 +240,35 @@ td {
     border-radius: 8px;
     border-left: 4px solid #ff6b9d;
     font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-right: 40px;
+}
+
+.bonus-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.bonus-item::after {
+    content: '○';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #666;
+}
+
+.bonus-item.completed {
+    background: rgba(76, 175, 80, 0.1);
+    border-left-color: #4CAF50;
+}
+
+.bonus-item.completed::after {
+    content: '✓';
+    color: #4CAF50;
 }
 
 .highlight {
@@ -388,4 +419,22 @@ td {
     font-size: 0.9rem;
     color: #888;
     margin-bottom: 5px;
+}
+
+.stage.completed {
+    opacity: 0.7;
+}
+
+.stage.completed::after {
+    content: "Etapa completada";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #4CAF50;
+    font-weight: 600;
+    pointer-events: none;
 }
